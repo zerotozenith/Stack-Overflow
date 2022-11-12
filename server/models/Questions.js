@@ -11,11 +11,11 @@ const QuestionSchema = mongoose.Schema({
     userId:{type:String},
     askedOn: {type: Date, default: Date.now},
     answer: [{
-        answerBody:String,
+        answerBody: String,
         userAnswered: String,
         userId: String,
         answeredOn: {type: Date, default: Date.now},
-    }]
+    }],
 })
 
 

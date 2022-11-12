@@ -32,7 +32,11 @@ const UserProfile = () => {
             
               <div className="user-name">
                <h1>{currentProfile?.name}</h1>
-               <p> Joined {moment(currentProfile?.joindOn).fromNow()}</p>
+               { currentProfile?.location?(
+              <h2> {currentProfile?.location}</h2>):
+              (<></>)
+              }
+               <p> Joined {moment(currentProfile?.joinedON).fromNow()}</p>
               </div>
             </div>
           {

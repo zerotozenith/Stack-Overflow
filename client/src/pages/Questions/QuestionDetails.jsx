@@ -11,16 +11,18 @@ import "./Questions.css";
 import DisplayAnswer from "./DisplayAnswer";
 import { postAnswer, deleteQuestion, voteQuestion} from "../../actions/question";
 
+
 const QuestionsDetails = () => {
 
   const { id } = useParams();
   const questionsList = useSelector((state) => state.questionsReducer);
   const [Answer, setAnswer] = useState("");
+  const [show, setShow] = useState(false)
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
   const User = useSelector((state) => (state.currentUserReducer));
-  const url = "http://localhost:3000";
+  const url = "https://stackoverflowclone-jyoti.netlify.app";
 
 
   const handlePostAns = (e, answerLength) => {
@@ -109,11 +111,11 @@ const QuestionsDetails = () => {
                               </div>
                             </div>
                         </div>
-                    </section>
+                </section>
                     {
                       question.noOfAnswers !== 0 && (
                         <section>
-                          <h3>{question.noOfAnswers} answers</h3>
+                          <h3>{question.noOfAnswers} Answers</h3>
                           <DisplayAnswer key={question._id} question={question} handleShare={handleShare}/>
                         </section>
                       )
@@ -131,7 +133,7 @@ const QuestionsDetails = () => {
                             <Link to='/Tags' key={tag} className='ans-tags'> {tag} </Link>
                           ))
                         } or
-                        <Link to='/AskQuestion' style={{textDecoration: "none", color: "#009dff"}}> " " ask your own questions</Link>
+                        <Link to='/AskQuestion' style={{textDecoration: "none", color: "#009dff"}}> ask your own questions</Link>
                       </p>
                     </section>
                 </div>

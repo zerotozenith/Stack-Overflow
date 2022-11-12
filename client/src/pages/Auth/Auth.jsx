@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+// import { render } from "react-dom";
 
 import './Auth.css'
 import icon from '../../assets/icon.png';
@@ -47,14 +48,15 @@ const handleSwitch = () => {
                         <h4>Display Name</h4>
                         <input type="text" id='name' name='name' onChange={(e) => {setName(e.target.value)}} />
                     </label>
+                    
                 )
             }
-            <label htmlFor="email">
+             <label htmlFor="email"> 
                <h4>Email</h4>
                <input type="email" name='email' id='email' onChange={(e) => {setEmail(e.target.value)}} />
             </label>
             <label htmlFor="password">
-                <div style={{display:"flex", justifyContent:"space-between"}}>
+                <div style={{ display: "flex", justifyContent:"space-between"}}>
                    <h4>Password</h4>
                   { !isSignup && <p style={{ color: "#007ac6", fontSize: '13px'}}>forgot password?</p> }
                 </div>

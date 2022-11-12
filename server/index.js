@@ -25,8 +25,9 @@ app.use('/answer',answerRoutes);
 const PORT = process.env.PORT || 5000;
 
 const DATABASE_URL = process.env.CONNECTION_URL 
+// const CONNECTION_URL ="mongodb+srv://admin:admin@stack-overflow-clone.c00vnai.mongodb.net/?retryWrites=true&w=majority"
 
-mongoose.connect( DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect( DATABASE _URL, { useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>app.listen(PORT, ()=>{console.log(`server running at the port ${PORT}`)}))
 .catch((err)=>console.log(err.message))
 

@@ -122,3 +122,66 @@
     line-height: 18px;
     white-space: pre-line;
 }
+
+.edit-profile-btn{
+    padding: 8px 10px;
+    border: solid 1px #7e7e7e;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.edit-profile-btn:hover{
+    background-color: #f5f9fc;
+}
+.edit-profile-title{
+    padding: 20px 0px;
+    border-bottom: solid 1px #dbd9d9;
+}
+.edit-profile-title-2{
+    color: grey;
+    font-weight: 400;
+}
+.edit-profile-form {
+    padding: 20px;
+    border: solid 1px #dbd9d9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.edit-profile-form label textarea{
+    padding: 5px;
+    margin-bottom: 20px;
+    border: solid 1px #dbd9d9;
+    width: 50%;
+}
+
+.user-submit-btn{
+    width: 150px;
+    padding: 14px 10px;
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.user-submit-btn:hover{
+    background-color: #0074cc;
+}
+
+.user-cancel-btn{
+    width: 100px;
+    padding: 14px 10px;
+    color: #0a95ff;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+

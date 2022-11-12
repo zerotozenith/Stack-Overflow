@@ -42,7 +42,7 @@ const EditProfileForm = ({currentUser, setSwitch}) => {
                 <p>Add tags seperated by 1 space</p>
                 <input type="text" id='tags' onChange={(e)=>setTags(e.target.value.split(' '))} />
              </label><br/>
-             <input type="submit" value="Save profie" className='user-submit-btn'/>
+             <input type="submit" value="Save profie" className='user-submit-btn' />
              <button type='button' className='user-cancel-btn' onClick={()=>setSwitch(false)}>Cancel</button>
             </form>
         </div>
